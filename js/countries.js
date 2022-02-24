@@ -15,9 +15,10 @@ const displayCountries = countries => {
         const div = document.createElement('div');
         div.classList.add('country')
         div.innerHTML = `
-            <h3>${country.name.common}</h3>
-            <p>${country.capital}</p>
-            <img src=${country.flags.png} width="150px">
+            <p><img src=${country.flags.png} width="50px"> ${country.continents}</p>
+            <p>Country: ${country.name.common}</p>
+            <p>Capital: ${country.capital}</p>
+            <p>Total Population: ${country.population}</p>
         `;
         countriesDiv.appendChild(div);
     });
